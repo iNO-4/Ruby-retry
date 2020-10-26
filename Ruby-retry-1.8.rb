@@ -60,3 +60,39 @@ puts "実行4"
 for i in 1..10 do  # 1..10は、1〜10までの範囲を表す
 	puts i
 end
+
+# 「eachメソッド」は、オブジェクト内の要素を順に取り出すメソッド
+# 「eachメソッド」で記述することで、データの先頭から順に繰り返して処理が行われる
+
+# (範囲、ハッシュ、配列などを指定).each do |変数|
+# 	処理
+# end
+# 以下の例では、apple、strawberry、orangeの単価を「eachメソッド」を用いて出力させている
+
+puts "---------------"
+puts "実行5"
+
+{"apple"=>130, "strawberry"=>180, "orange"=>100}.each do |fruit, price|  # ハッシュの内容を順にキーをfruit、値をpriceに代入して繰り返す
+	puts "#{fruit}は#{price}円です"  # 変数展開
+end
+
+# 実行結果は、
+# 「appleは130円です
+# strawberryは180円です
+# orangeは100円です」
+# と表示される
+
+# 繰り返し処理を中断するには、「break」を使う
+# 「break」は、「while」や「for」、「each」などの繰り返し文の中で利用する
+
+puts "---------------"
+puts "実行6"
+
+i = 0
+while i <= 10 do
+	if i >5
+		break  # iが5より大きくなると繰り返しから抜ける
+	end
+	puts i
+	i += 1
+end
