@@ -75,3 +75,4 @@ end
 puts greeting  # greetingメソッドの戻り値を、putsメソッドで出力する
 
 # 実行結果は「Hello, John!」となる
+
